@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Buy Now</title>
+  <style>
+        /* Add your styles here */
+  </style>
+</head>
+<body>
+<h1>Buy Now</h1>
+<div class="container">
+
+
+  <form th:action="@{/user/buySuccess}" method="get" onsubmit="return validatePaymentMethod()">
+    <div>
+      <label for="address">Delivery Address:</label>
+      <input type="text" id="address" name="address" required />
+    </div>
+
+    <div>
+      <label>Payment Method:</label>
+      <div>
+        <input type="radio" id="netBanking" name="paymentMethod" value="Net Banking" />
+        <label for="netBanking">Net Banking</label>
+      </div>
+      <div>
+        <input type="radio" id="upi" name="paymentMethod" value="UPI" />
+        <label for="upi">UPI</label>
+      </div>
+      <div>
+        <input type="radio" id="cod" name="paymentMethod" value="Cash on Delivery" />
+        <label for="cod">Cash on Delivery</label>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script>
+    function validatePaymentMethod() {
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+        if (paymentMethod && paymentMethod.value === "Cash on Delivery") {
+            return true;
+        } else {
+            alert("Payment method not available.");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

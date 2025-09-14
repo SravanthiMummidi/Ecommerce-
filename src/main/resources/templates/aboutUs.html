@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>About Us</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bg {
+            background-image: url('images/image1.jpg'); /* Update with the correct path */
+            height: 200%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: #000;
+            font-weight: 500;
+            margin-right: 15px;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .navbar-toggler-icon {
+            color: #000;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            padding: 8px 16px;
+        }
+
+        .navbar-light .navbar-nav .nav-link.active {
+            color: #007bff;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgba(0, 0, 0, .55);
+        }
+
+        .navbar .btn {
+            margin-left: 10px;
+        }
+
+        .about-us .card-header {
+            font-size: 1.5rem;
+            background-color: #001021;
+            color: #f5f6f7; /* Set the heading color to black */
+        }
+
+        .about-us h1, .about-us h2 {
+            color: #333;
+        }
+
+        .about-us p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-us .team-member img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shopnow">Shop Now</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="register" class="btn btn-dark">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark" href="signin">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card about-us">
+                    <div class="card-header text-center fs-4">About Us</div>
+                    <div class="card-body">
+                        <section>
+                            <h1>Welcome to Our Fashion Management System!</h1>
+                            <p>We are excited to introduce you to our innovative project designed to revolutionize the fashion industry. Our Fashion Management System is crafted with the vision to streamline operations, enhance efficiency, and deliver a seamless experience for fashion professionals.</p>
+                        </section>
+
+                        <section class="vision">
+                            <h2>Our Vision</h2>
+                            <hr>
+                            <p>Our vision is to empower fashion businesses with a comprehensive management system that simplifies processes, enhances productivity, and drives growth. By leveraging cutting-edge technology and a user-centric design approach, we aim to set new benchmarks in the fashion industry and contribute to its evolution.</p>
+                        </section>
+
+                        <section>
+                            <h2>Our Team</h2>
+                            <hr>
+                            <div class="row team-member">
+                                <div class="col-md-3">
+                                    <img src="images/srirama.jpg" alt="Srirama Joshna">
+                                </div>
+                                <div class="col-md-9">
+                                    <h2>Srirama Joshna</h2>
+                                    <p>With a passion for both technology and fashion, Srirama Joshna brings a unique blend of creativity and technical expertise to the project. Her background in software development and a keen interest in fashion trends has enabled her to create a system that not only meets but exceeds industry standards. Srirama is dedicated to ensuring that our Fashion Management System is intuitive, user-friendly, and tailored to meet the diverse needs of fashion businesses.</p>
+                                </div>
+                            </div>
+
+                            <div class="row team-member">
+                                <div class="col-md-3">
+                                    <img src="images/bharadwaj.jpeg" alt="Janapala Bharadwaj">
+                                </div>
+                                <div class="col-md-9">
+                                    <h2>Janapala Bharadwaj</h2>
+                                    <p>Janapala Bharadwaj is a skilled developer with a deep understanding of fashion logistics and operations. His experience in managing complex systems and his attention to detail have been instrumental in shaping the functionality and performance of our Fashion Management System. Janapala’s commitment to excellence ensures that our system operates smoothly and effectively, providing valuable insights and solutions for fashion management.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <p>Thank you for visiting our page and showing interest in our Fashion Management System. We are committed to delivering a solution that will make a significant impact on the fashion industry and look forward to supporting your success.</p>
+                            <p>For any inquiries or further information, please feel free to reach out to us.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

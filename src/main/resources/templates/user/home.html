@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="x-icon" href="/images/logo.png">
+    <title>Home</title>
+    <style>
+        /* Customize the navbar */
+        .navbar {
+            background-color: #fff; /* Change this to match the navbar background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+        }
+
+        .navbar-brand img {
+            height: 40px; /* Increase the height as needed */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        .nav-link {
+            color: #000; /* Default color for the links */
+            font-weight: 500; /* Adjust as needed */
+            margin-right: 15px; /* Adjust spacing between links */
+        }
+
+        .nav-link:hover {
+            color: #007bff; /* Change this to the hover color for links */
+        }
+
+        .navbar-toggler-icon {
+            color: #000; /* Customize the color of the toggler icon */
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            padding: 8px 16px; /* Adjust padding as needed */
+        }
+
+        .navbar-light .navbar-nav .nav-link.active {
+            color: #007bff; /* Active link color */
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgba(0,0,0,.55); /* Link color */
+        }
+
+        .navbar .btn {
+            margin-left: 10px; /* Space between Register and Login buttons */
+        }
+
+        .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item {
+            color: #000;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            color: #007bff;
+            background-color: #f8f9fa;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons a:hover {
+            color: #007bff;
+        }
+
+        .nav-icons i {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Increase the size of the profile icon */
+        .fa-user {
+            font-size: 27px; /* Adjust the size as needed */
+        }
+
+        /* Add background image */
+        body {
+            background-image: url('/images/image1.jpg'); /* Use an absolute path to the background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px; /* Adjust this value for spacing from top */
+        }
+
+        .container h3 {
+            margin-bottom: 0;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 8px 17px;
+            background-color: #000b17;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" integrity="sha512-JF+eEnJg3sZ1AKHtBUw7DxF7cW1sY8i/Y2/2i6t6rxGSt5HtZwMd3yBlST4z9Ko43xJ1y3Tw7qBNVS/Xp9Y8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home">
+            <img src="/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop">Shop Now</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="profile">Your Profile</a></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Welcome [[${user.fullName}]]!</h1>
+    <p>Check out the New Collection!</p>
+    <p>Find the best products at unbeatable prices.</p>
+    <button class="button" onclick="window.location.href='shop'">Shop Now</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

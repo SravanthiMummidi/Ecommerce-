@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Title</title>
+    <style>
+        /* Customize the navbar */
+        .navbar {
+            background-color: #fff; /* Change this to match the navbar background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+        }
+
+        .navbar-brand img {
+            height: 60px; /* Increase the height as needed */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        .nav-link {
+            color: #000; /* Default color for the links */
+            font-weight: 500; /* Adjust as needed */
+            margin-right: 15px; /* Adjust spacing between links */
+        }
+
+        .nav-link:hover {
+            color: #007bff; /* Change this to the hover color for links */
+        }
+
+        .navbar-toggler-icon {
+            color: #000; /* Customize the color of the toggler icon */
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            padding: 8px 16px; /* Adjust padding as needed */
+        }
+
+        .navbar-light .navbar-nav .nav-link.active {
+            color: #007bff; /* Active link color */
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgba(0,0,0,.55); /* Link color */
+        }
+
+        .navbar .btn {
+            margin-left: 10px; /* Space between Register and Login buttons */
+        }
+    </style>
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shopnow">Shop Now</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="register" class="btn btn-dark">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark" href="signin">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div th:replace="${content}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
